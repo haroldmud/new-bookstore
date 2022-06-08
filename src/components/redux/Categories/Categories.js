@@ -1,11 +1,11 @@
-const CHECKING_STATUS = "bookstore/redux/Categories/CHECKING_STATUS";
-const UPDATING_STATUS = "bookstore/redux/Categories/UPDATING_STAUTS";
+const CHECKING_STATUS = 'bookstore/redux/Categories/CHECKING_STATUS';
+const UPDATING_STATUS = 'bookstore/redux/Categories/UPDATING_STAUTS';
 
 function Categories(state = [], action) {
   switch (action.type) {
-    case "CHECKING_STATUS":
-      return "in construction";
-    case "UPDATING_STATUS": {
+    case 'CHECKING_STATUS':
+      return 'in construction';
+    case 'UPDATING_STATUS': {
       state.forEach((element) => {
         if (element.id === action.id) {
           element.status = action.newUpdating;
@@ -13,6 +13,8 @@ function Categories(state = [], action) {
       });
       return state;
     }
+    default:
+      return state;
   }
 }
 

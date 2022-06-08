@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Categories () {
-        return (
-            <React.Fragment>
-                <h1>here are the categories</h1>
-            </React.Fragment>
-        );
+function Categories() {
+  return (
+    <>
+      <h1>here are the categories</h1>
+    </>
+  );
 }
- 
+
 export default Categories;

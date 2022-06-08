@@ -8,10 +8,10 @@ import Book from './components/Book';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <Header/>
-    <Routes>  
-      <Route path="/" element = {<Book/>}/>
-      <Route path="/Categories" element= {<Categories/>}/>
+    <Header />
+    <Routes>
+      <Route path="/" element={<Book />} />
+      <Route path="/Categories" element={<Categories />} />
     </Routes>
-  </BrowserRouter>
+  </BrowserRouter>,
 );

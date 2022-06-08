@@ -1,19 +1,19 @@
-const ADDING_BOOK = "bookstore/redux/Books/ADDING_BOOK";
-const REMOVING_BOOK = "bookstore/redux/Books/REMOVING_BOOK";
-const DISPLAYING_BOOK = "bookstore/redux/Books/DISPLAYING_BOOK";
-const initStore = [];
+const ADDING_BOOK = 'bookstore/redux/Books/ADDING_BOOK';
+const REMOVING_BOOK = 'bookstore/redux/Books/REMOVING_BOOK';
+const DISPLAYING_BOOK = 'bookstore/redux/Books/DISPLAYING_BOOK';
+let initStore = [];
 
 const bookStore = (state = initStore, action) => {
   switch (action.type) {
-    case "ADDING_BOOK": {
+    case 'ADDING_BOOK': {
       initStore = [...state, action.newBook];
       return initStore;
     }
-    case "REMOVING_BOOK": {
+    case 'REMOVING_BOOK': {
       initStore = state.filter((bk) => bk.id !== action.id);
       return initStore;
     }
-    case "DISPLAYING_BOOK":
+    case 'DISPLAYING_BOOK':
       return initStore;
     default:
       return state;
