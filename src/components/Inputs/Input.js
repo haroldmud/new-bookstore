@@ -24,9 +24,18 @@ function Input() {
   return (
     <div>
       <h2>ADD NEW BOOK</h2>
-      <input type="text" placeholder="Book title" onChange={onChangeTitle} />
-      <input type="text" placeholder="Author" onChange={onChangeAuthor} />
-      <button type="button" onClick={() => dispatch(addingBook(newBook))}>
+      <input type="text" placeholder="Book title" value={newBook.title} onChange={onChangeTitle} />
+      <input type="text" placeholder="Author" value={newBook.author} onChange={onChangeAuthor} />
+      <button
+        type="button"
+        onClick={() => {
+          setNewBook({
+            title: '',
+            author: '',
+          });
+          return dispatch(addingBook(newBook));
+        }}
+      >
         ADD BOOK
       </button>
     </div>
