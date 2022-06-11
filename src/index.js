@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Categories from './components/Categories';
 import Book from './components/Book';
 import Storing from './redux/configureStore';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

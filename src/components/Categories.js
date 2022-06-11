@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { checking } from '../redux/Categories/Categories';
+import './styles/Category.css';
 
 function Categories() {
   const checkSelect = useSelector((state) => state.Categories);
@@ -8,7 +9,7 @@ function Categories() {
   return (
     <>
       <h1>Here are the categories</h1>
-      <button type="button" onClick={() => dispatch(checking())}>check status</button>
+      <button className="cat" type="button" onClick={() => dispatch(checking())}>check status</button>
       <p>{checkSelect}</p>
     </>
   );
