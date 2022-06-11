@@ -4,24 +4,7 @@ export const POST_GET_URL = 'https://us-central1-bookstore-api-e63c8.cloudfuncti
 const ADDING_BOOK = 'bookstore/redux/Books/ADDING_BOOK';
 const REMOVING_BOOK = 'bookstore/redux/Books/REMOVING_BOOK';
 const DISPLAYING_BOOK = 'bookstore/redux/Books/DISPLAYING_BOOK';
-let initStore = [
-  // {
-  //   id: 0,
-  //   genre: "action",
-  //   author: "Suzanne Morgenstein",
-  //   title: "Hunger Game",
-  //   completion: "60%",
-  //   chapter: "chapter3",
-  // },
-  // {
-  //   id: 1,
-  //   genre: "action",
-  //   author: "Joseph Morgan",
-  //   title: "Vempire diaries",
-  //   completion: "40%",
-  //   chapter: "chapter2",
-  // },
-];
+let initStore = [];
 
 const bookReducer = (state = initStore, action) => {
   switch (action.type) {
