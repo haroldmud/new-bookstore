@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addingBook } from '../../redux/Books/Books';
+import '../styles/Input.css';
 
 function Input() {
   const dispatch = useDispatch();
@@ -22,22 +23,24 @@ function Input() {
   };
 
   return (
-    <div>
+    <div className="input">
       <h2>ADD NEW BOOK</h2>
-      <input type="text" placeholder="Book title" value={newBook.title} onChange={onChangeTitle} />
-      <input type="text" placeholder="Author" value={newBook.author} onChange={onChangeAuthor} />
-      <button
-        type="button"
-        onClick={() => {
-          setNewBook({
-            title: '',
-            author: '',
-          });
-          return dispatch(addingBook(newBook));
-        }}
-      >
-        ADD BOOK
-      </button>
+      <form>
+        <input className="nameInput" type="text" placeholder="Book title" value={newBook.title} onChange={onChangeTitle} />
+        <input className="atrInput" type="text" placeholder="Author" value={newBook.author} onChange={onChangeAuthor} />
+        <button
+          type="button"
+          onClick={() => {
+            setNewBook({
+              title: '',
+              author: '',
+            });
+            return dispatch(addingBook(newBook));
+          }}
+        >
+          ADD BOOK
+        </button>
+      </form>
     </div>
   );
 }

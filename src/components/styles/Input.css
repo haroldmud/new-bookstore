@@ -1,0 +1,45 @@
+.input {
+  width: 80%;
+  justify-content: center;
+  margin: 0 auto;
+  border-top: rgba(128, 128, 128, 0.281) 2px solid;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  height: 2.5rem;
+}
+
+form button {
+  width: 10rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: #0290ff;
+  transition: 0.3s;
+}
+
+form button:hover {
+  color: #0290ff;
+  background-color: #0291ffa4;
+}
+
+.input h2 {
+  color: rgba(128, 128, 128, 0.61);
+}
+
+.nameInput {
+  width: 36rem;
+  background-color: transparent;
+  outline: none;
+  border: rgba(128, 128, 128, 0.349) 1px solid;
+}
+
+.atrInput {
+  width: 17rem;
+  outline: none;
+  background-color: transparent;
+  border: rgba(128, 128, 128, 0.349) 1px solid;
+}

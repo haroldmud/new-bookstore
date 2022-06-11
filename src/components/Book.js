@@ -12,34 +12,44 @@ const Books = ({ displayBooks }) => {
   const dispatch = useDispatch();
   return (
     <>
-      {
+      <section className="main-section">
+        <div className="grid">
+          {
         wholeBooks.map((element) => (
-          <section className="movie-section" key={element.id}>
-            <div>
-              <b>{element[1][0].author}</b>
+          <div className="movie-section" key={element.id}>
+            <div className="book">
+              <b>{element[1][0].category}</b>
               <h2>{element[1][0].title}</h2>
-              <p>{element[1][0].category}</p>
+              <p>{element[1][0].author}</p>
               <div>
-                <button type="button">Comments</button>
-                <button type="button" onClick={() => dispatch(removingBook(element[0]))}>Remove</button>
-                <button type="button">Edit</button>
+                <button className="combtn" type="button">Comments</button>
+                <button className="rembtn" type="button" onClick={() => dispatch(removingBook(element[0]))}>Remove</button>
+                <button className="edtbtn" type="button">Edit</button>
               </div>
             </div>
-            <div>
-              <h2>
-                {element.completion}
-                <span>Completed</span>
-              </h2>
+            <div className="completion">
+              <div className="Circle">
+                <div className="mask half">
+                  <div className="fill">
+                    <div className="inside-circle" />
+                  </div>
+                </div>
+              </div>
+              <div className="prct">
+                <h2>50%</h2>
+                <p>Completed</p>
+              </div>
             </div>
-            <div>
+            <div className="update">
               <h2>CURRENT CHAPTER</h2>
-              <b>Chapter3</b>
+              <h3>Chapter 3</h3>
               <button type="button">UPDATE PROGRESS</button>
             </div>
-          </section>
+          </div>
         ))
       }
-      <hr />
+        </div>
+      </section>
       <Input />
     </>
   );
